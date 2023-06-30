@@ -56,7 +56,7 @@ export class Controller {
       case "resume":
         const resumeMessage = '<p style="font-size: 1rem;">Loading resume....Done</p>';
         new UniversalFunction().updateElement("div", "output", resumeMessage);
-        const resumeURL = "./ROX.pdf"; // Assuming the resume PDF file is named "resume.pdf" and is in the same directory as the other files
+        const resumeURL = "./Arthashastra.pdf"; // Assuming the resume PDF file is named "resume.pdf" and is in the same directory as the other files
 
         setTimeout(() => {
           window.open(resumeURL, "_blank");
