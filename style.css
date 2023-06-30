@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  background-image: url(img/sombra.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--primaryTextColor);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'FiraCode Nerd Font', sans-serif, 'Courier New', Courier, monospace;
+}
+
+
+/* --------------------------------------Title bar-------------------------------------- */
+.navbar {
+  width: 90%;
+  max-width: 900px;
+  height: 35px;
+  position: fixed;
+  top: 30px; /* Initial position of the navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1d1b1b;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  color: #5f5353;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-title {
+  font-size: 14px;
+  margin: 0; /* Added property to remove any default margin */
+  flex: 1; /* Added property to distribute remaining space evenly */
+  display: flex; /* Added property to enable flexbox layout */
+  color: white;
+  justify-content: center; /* Added property to center the content horizontally */
+}
+
+.navbar-icon {
+  margin-right: 7px; /* Adjust margin as needed */
+  padding-top: 2px;
+}
+
+.icon {
+  width: 30px; /* Adjust icon size as needed */
+  height: 30px;
+  padding: 3px; /* Adjust padding as needed */
+ 
+}
+
+.navbar-buttons {
+  margin-left: auto; /* Push buttons to the right */
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  width: 10px; /* Adjust button size as needed */
+  height: 10px;
+  margin-left: 8px; /* Adjust button spacing as needed */
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.minimize {
+  background-color: #fcba03; /* Customize minimize button color */
+}
+
+.maximize {
+  background-color: #00c906; /* Customize maximize button color */
+}
+
+.close {
+  background-color: #ff3c3c; /* Customize close button color */
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.window {
+  width: 90%;
+  max-width: 900px;
+  height: 610px;
+  align-items: center;
+  margin: 55px auto 0; /* Adjust the margin-top value to make space for the navbar */
+  background-color: #000;
+  border: 1px solid #4b4b4b;
+  border-radius: 8px;
+  padding: 16px;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.main {
+  flex: 1;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #fdfdfd #333333;
+  padding-bottom: 1rem;
+}
+
+.colored-text{
+  color: #555;
+}
+
+/* --------------------------------------ABOUT-------------------------------- */
+.about-container {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 20px;
+  padding: 20px;
+  /* color: #ffffff; */
+  color: #555;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-line {
+  margin-bottom: 10px;
+}
+
+.about-line b {
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* ---------------------------------Projects------------------------------------- */
+
+.projects-container {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project-index {
+  font-weight: bold;
+  color: #555;
+}
+
+.project-title {
+  text-decoration: none;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.project-title:hover {
+  text-decoration: underline;
+}
+
+.project-description {
+  color: #917e7e;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* ---------------------------SCROLLBAR----------------------------------------------- */
+
+.window {
+  overflow-y: auto;
+  /* max-height: 500px; Adjust the max-height value as needed */
+}
+
+ /* Styling the scrollbar */
+ ::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #707070;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8c8c8c;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* -------------------------------------Banner----------------------------------- */
+
+.intro {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: min(0.5rem, 1vw);
+  /* color: aliceblue; */
+  color: #555;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.art {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #555;
+  font-weight: bold;
+}
+
+.name {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #555;
+  font-weight: bold;
+}
+
+.help {
+  white-space: pre-line;
+  font-size: 1em;
+  font-weight: normal;
+  color: #555;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .art {
+    font-size: 0.6rem;
+  }
+  
+  .name {
+    font-size: 0.8rem;
+  }
+  
+  .help {
+    font-size: 0.9em;
+  }
+}
+
+
+/* -----------------------------------------Skills-------------------------------------------- */
+
+/* Responsive Skills Container */
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: transparent; /* Remove background color */
+}
+
+.skills-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual Skill Styles */
+.skill {
+  width: 90%;
+  max-width: 700px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: transparent; /* Remove background color */
+}
+
+.skill-info {
+  margin-bottom: -10px;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.skill-progress {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Progress Bar Styles */
+.skill .block,
+.skill .block-empty {
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  /* background-color: #024e22; */
+  background-color: #10477a;
+}
+
+.skill .block-empty {
+  background-color: #555;
+}
+
+.skill .block {
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+
+
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+  .skills-column {
+    justify-content: center;
+  }
+}
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
+.command {
+  color: #0a6638;
+}
+
+.command_input {
+  border: none;
+  outline: none;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: var(--color-text);
+  caret-color: var(--color-caret-Keyword);
+  width: 100%;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.line1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.line2 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.line1 span,
+.line2 span,
+.command_input {
+  color: var(--color-terminal-text);
+  font-size: 1em;
+}
+
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.keyword {
+  font-weight: bold;
+  color: #333;
+}
+
+.command {
+  margin-right: 5px;
+}
+
+.description {
+  color: #555;
+}
+
+
+.keyword {
+  color: var(--color-caret-Keyword);
+  font-weight: normal;
+  text-shadow: 0 0 .3rem var(--color-caret-Keyword);
+  color: #ff0000;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.output,
+.error {
+  font-weight: normal;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.error {
+  color: var(--color-error);
+}
+
+
+
+.one-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-weight: bold;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.four-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* -------------------------falling Animation------------------------------------- */
+
+@keyframes fallingAnimation {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.falling-letters-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.falling-letter {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fallingAnimation 1s linear;
+}

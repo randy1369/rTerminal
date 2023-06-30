@@ -1,0 +1,34 @@
+[
+    { "name": "help", "description": "list down all available commands" },
+    { "name": "about", "description": "learn more about me.👨‍💻" },
+    { "name": "whoami", "description": "??? 🤔" },
+    { "name": "projects", "description": " View my personal Projects." },
+    { "name": "skills", "description": "My technical skills."},
+    { "name": "gui", "description": "Activate Graphical Mode."},
+
+    { "name": "socials", "description": "Check out my social accounts. 📱",
+        "options": [
+            {  "option": "--goto [social-network]", "description": "Go to the given social network." },
+            {  "option": "--list", "description": "List all the social networks." }
+        ]
+    },
+
+    { "name": "blog", "description": "check out my blog" },
+
+    { "name": "resume", "description": "Display resume. 📄", 
+    "options": [
+        {"option": "--download", "description": "Download the resume. 📥"}
+    ]
+    },
+
+    { "name": "email", "description": "Feel free to reach out. 📄"}, 
+    { "name": "clear", "description": "Clear the terminal. 🧹" },
+
+  
+
+
+    {"name": "exit", "description": "Exit the terminal. 🚪"}
+]
+
+
+
