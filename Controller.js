@@ -75,6 +75,22 @@ export class Controller {
         executeCowsay(window.addCommand);
         break;
       
+      case "email":
+        const emailURL = "mailto:randymark6300@gmail.com";
+        const confirmationMessage = "Do you want to open your email?";
+        const openMessage = '<p style="font-size: 1rem;">opening prompt...</p>';
+        const cancelMessage = '<p style="font-size: 1rem;">Opening email cancelled.</p>';
+    
+        new UniversalFunction().updateElement("div", "output", openMessage);
+    
+        setTimeout(() => {
+            if (window.confirm(confirmationMessage)) {
+                window.open(emailURL, "_blank");
+            } else {
+                new UniversalFunction().updateElement("div", "output", cancelMessage);
+            }
+        }, 1000);
+        break;
     
 
 
