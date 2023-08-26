@@ -42,7 +42,7 @@ export class Controller {
       case "gui":
         const guiMessage = '<p style="font-size: 1rem;">Opening GUI version...</p>';
         new UniversalFunction().updateElement("div", "output", guiMessage);
-        const websiteURL = "https://rocks.up.railway.app/"; // Replace with your website URL
+        const websiteURL = "https://roxdigitalresume.streamlit.app/"; // Replace with your website URL
         setTimeout(() => {
           window.open(websiteURL, "_blank");
         }, 1000);
